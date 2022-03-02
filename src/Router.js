@@ -1,15 +1,15 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // 하은's 컴포넌트
-import LoginHaeun from "./pages/haeun/Login/Login";
-import DetailHaeun from "./pages/haeun/Detail/Detail";
-import ListHaeun from "./pages/haeun/List/List";
+import LoginHaeun from './pages/haeun/Login/Login';
+import DetailHaeun from './pages/haeun/Detail/Detail';
+import ListHaeun from './pages/haeun/List/List';
 
 // 수빈's 컴포넌트
-import LoginSubin from "./pages/subin/pages/login/Login";
-import DetailSubin from "./pages/subin/pages/detail/Detail";
-import ListSubin from "./pages/subin/pages/list/List";
+import LoginSubin from './pages/subin/pages/login/Login';
+import DetailSubin from './pages/subin/pages/detail/Detail';
+import ListSubin from './pages/subin/pages/list/List';
 
 function Router() {
   return (
