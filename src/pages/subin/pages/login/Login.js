@@ -3,7 +3,7 @@ import "./Login.scss"
 
 function Login() {
     return (
-    <div className="login">
+    <div className="loginSubin">
         <section id="loginSection">
         <h2 id="title">WeBucks</h2>
 

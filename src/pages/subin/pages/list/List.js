@@ -4,7 +4,7 @@ import "./List.scss"
 
 function List() {
     return (
-    <div className="list">
+    <div className="listSubin">
     <TopNav />
     
     {/* <!-- main --> */}

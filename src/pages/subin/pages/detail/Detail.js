@@ -4,7 +4,7 @@ import "./Detail.scss"
 
 function Detail() {
     return (
-    <div className="detail">
+    <div className="detailSubin">
     <TopNav />
     
     {/* <!-- subtitle - coffee type --> */}

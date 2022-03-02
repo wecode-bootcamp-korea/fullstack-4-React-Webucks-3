@@ -3,7 +3,7 @@ import "./TopNav.scss"
 
 function TopNav() {
     return (
-        <div className="TopNav">
+        <div className="TopNavSubin">
         <header>
         <h2 className="title">WeBucks</h2>
         <nav>

@@ -1,18 +1,20 @@
 import React from 'react';
-import './Topnav.scss';
+import './TopNav.scss';
 
-function Topnav() {
+function TopNav() {
     return (
-        <div className="head">
-            <h3 id="logo">Webucks</h3>
-            <ul className="list">
-                <li>COFFEE</li>
-                <li>MENU</li>
-                <li>STORE</li>
-                <li>WHAT'S NEW</li>
-            </ul>
+        <div class="navHaeun">
+            <div className="head">
+                <h3 id="logo">Webucks</h3>
+                <ul className="list">
+                    <li>COFFEE</li>
+                    <li>MENU</li>
+                    <li>STORE</li>
+                    <li>WHAT'S NEW</li>
+                </ul>
+            </div>
         </div>
     );
 };
 
-export default Topnav;
+export default TopNav;
