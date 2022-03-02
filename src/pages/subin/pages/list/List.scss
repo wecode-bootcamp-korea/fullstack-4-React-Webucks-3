@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.list {
+    max-width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    /* main */
+
+    /* list head */
+    .listHead {
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+        padding-left: 15px;
+        width: 100%;
+        height: 50px;
+        background: #F6F5F0;
+
+        .listType {
+            font-weight: bold;
+        }
+
+        .fa-mug-hot {
+            margin-left: 5px;
+        }
+
+        .feature {
+            margin-left: 5px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+    }
+
+    /* list grid */
+    .listGrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        width: 100%;
+
+        .gridWrap {
+            position: relative;
+
+            /* coffee img */
+            .overflow {
+                margin: 0 auto;
+                width: 240px;
+                height: 240px;
+                overflow: hidden;
+            }
+
+            .coffeeImg {
+                width: 240px;
+                height: 240px;
+                transition: all .5s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
+
+                
+            }
+
+            /* coffee name */
+            .coffeeName {
+                padding: 10px;
+                font-size: 90%;
+                text-align: center;
+            }
+
+            /* heart btn toggle */
+            .fa-heart {
+                position: absolute;
+                right: 16px;
+                bottom: 9px;
+                cursor: pointer;
+            }
+
+            .btnOff {
+                color: black;
+                opacity: .2;
+            }
+
+            .btnOn {
+                color: red;
+                opacity: 1;
+            }
+        }
+        
+    }
+
+    // @media (min-width : 500px) {
+    //     section.listGrid {
+    //         grid-template-columns: repeat(2, 1fr);
+    //     }
+
+    //     main > .listGrid > .gridWrap > .overflow {
+    //         width: 240px;
+    //         height: 240px;
+    //     }
+
+    //     .list>main>.listGrid>.gridWrap>.overflow>.coffeeImg {
+    //         width: 240px;
+    //         height: 240px;
+
+    //     }
+    // }
+
+    // @media (min-width : 780px) {
+    //     section.listGrid {
+    //         grid-template-columns: repeat(3, 1fr);
+    //     }
+
+    //     main > .listGrid > .gridWrap > .overflow {
+    //         width: 250px;
+    //         height: 250px;
+    //     }
+
+    //     .list>main>.listGrid>.gridWrap>.overflow>.coffeeImg {
+    //         width: 250px;
+    //         height: 250px;
+
+    //     }
+    // }
+
+    // @media (min-width : 1024px) {
+    //     section.listGrid {
+    //         grid-template-columns: repeat(4, 1fr);
+    //     }
+
+    //     .list > main > .listGrid > .gridWrap > .overflow {
+    //         width: 225px;
+    //         height: 225px;
+    //     }
+
+    //     .list > main > .listGrid > .gridWrap > .overflow > .coffeeImg  {
+    //         width: 225px;
+    //         height: 225px;
+    //     }
+    // }
+}
+
+/* 추가적으로 구현 해볼거 */
+/* nav bar -> fixed */
+/* max-width: 768px (or 780px) nav bar toggle */
