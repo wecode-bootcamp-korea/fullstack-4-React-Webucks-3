@@ -118,7 +118,7 @@ function ListJugnhoon() {
         </span>
       </section>
       <section className="menuTitle">
-        <h2 className="menu_1st">콜드 브루 커피 </h2>
+        <h2 className="menu_1st">브루드 커피 </h2>
         <i className="fa-solid fa-mug-hot"></i>
         <h3 className="menual">
           디카페인 에스프레소 샷 추가 가능(일부 음료 제외)
