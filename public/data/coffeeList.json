@@ -47,16 +47,31 @@
     "imgURL": "/",
     "isLike": true
   },
+
   {
     "id": 9,
-    "name": "아이스 커피",
+    "name": "콜드 브루 몰트",
     "imgURL": "/",
     "isLike": true
   },
   {
     "id": 10,
+    "name": "콜드 브루 오트 라떼",
+    "imgURL": "./images/10.png",
+    "isLike": true
+  },
+
+  {
+    "id": 11,
+    "name": "아이스 커피",
+    "imgURL": "./images/11.png",
+    "isLike": true
+  },
+
+  {
+    "id": 12,
     "name": "오늘의 커피",
-    "imgURL": "/",
+    "imgURL": "./images/12.png",
     "isLike": true
   }
 ]
