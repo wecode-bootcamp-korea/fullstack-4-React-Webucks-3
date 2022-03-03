@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "나이트로 바닐라 크림",
+    "imgURL": "/",
+    "isLike": true
+  },
+  {
+    "id": 2,
+    "name": "나이트로 콜드 브루",
+    "imgURL": "/",
+    "isLike": true
+  },
+  {
+    "id": 3,
+    "name": "돌체 콜드 브루",
+    "imgURL": "/",
+    "isLike": true
+  },
+  {
+    "id": 4,
+    "name": "바닐라 크림 콜드 브루",
+    "imgURL": "/",
+    "isLike": true
+  },
+  {
+    "id": 5,
+    "name": "벨벳 다크 모카 나이트로",
+    "imgURL": "/",
+    "isLike": true
+  },
+  {
+    "id": 6,
+    "name": "시그니처 더 블랙 콜드 브루",
+    "imgURL": "/",
+    "isLike": true
+  },
+  {
+    "id": 7,
+    "name": "제주 비자림 콜드 브루",
+    "imgURL": "/",
+    "isLike": true
+  },
+  {
+    "id": 8,
+    "name": "콜드 브루",
+    "imgURL": "/",
+    "isLike": true
+  },
+  {
+    "id": 9,
+    "name": "아이스 커피",
+    "imgURL": "/",
+    "isLike": true
+  },
+  {
+    "id": 10,
+    "name": "오늘의 커피",
+    "imgURL": "/",
+    "isLike": true
+  }
+]
