@@ -1,5 +1,6 @@
 .ListJunghoon {
   width: max-content;
+  margin: auto;
 
   .container {
     width: 80%;
@@ -64,13 +65,12 @@
 
     a:link {
       text-decoration: none;
-      color: none;
+      color: black;
     }
 
     a:visited {
       color: black;
     }
-
     a:hover {
       color: green;
     }
