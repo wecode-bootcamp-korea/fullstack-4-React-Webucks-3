@@ -11,6 +11,11 @@ import LoginSubin from './pages/subin/pages/login/Login';
 import DetailSubin from './pages/subin/pages/detail/Detail';
 import ListSubin from './pages/subin/pages/list/List';
 
+//다미's 컴포넌트
+import LoginDami from './pages/dami/Login/Login';
+import DetailDami from './pages/dami/Detail/Detail';
+import ListDami from './pages/dami/List/List';
+
 function Router() {
   return (
     <BrowserRouter>
@@ -21,6 +26,13 @@ function Router() {
         <Route path="/login-subin" element={<LoginSubin />} />
         <Route path="/list-subin" element={<ListSubin />} />
         <Route path="/detail-subin" element={<DetailSubin />} />
+        <Route path="/" element={<LoginJunghoon />} />
+        <Route path="/List" element={<ListJunghoon />} />
+        <Route path="/List/Detail" element={<DetailJunghoon />} />
+
+        <Route path="/login-dami" element={<LoginDami />} />
+        <Route path="/list-dami" element={<ListDami />} />
+        <Route path="/detail-dami" element={<DetailDami />} />
       </Routes>
     </BrowserRouter>
   );
