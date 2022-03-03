@@ -11,6 +11,12 @@ import LoginSubin from './pages/subin/pages/login/Login';
 import DetailSubin from './pages/subin/pages/detail/Detail';
 import ListSubin from './pages/subin/pages/list/List';
 
+// 정훈's 컴포넌트
+
+import LoginJunghoon from './pages/junghoon/Login/Login';
+import DetailJunghoon from './pages/junghoon/Detail/Detail';
+import ListJunghoon from './pages/junghoon/List/List';
+
 function Router() {
   return (
     <BrowserRouter>
@@ -21,6 +27,9 @@ function Router() {
         <Route path="/login-subin" element={<LoginSubin />} />
         <Route path="/list-subin" element={<ListSubin />} />
         <Route path="/detail-subin" element={<DetailSubin />} />
+        <Route path="/" element={<LoginJunghoon />} />
+        <Route path="/List" element={<ListJunghoon />} />
+        <Route path="/List/Detail" element={<DetailJunghoon />} />
       </Routes>
     </BrowserRouter>
   );
