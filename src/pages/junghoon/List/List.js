@@ -6,7 +6,7 @@ import './List.scss';
 
 function ListJugnhoon() {
   return (
-    <div>
+    <div className="ListJunghoon">
       <TopNavBar />
       <section className="menuTitle">
         <h2 className="menu_1st">콜드 브루 커피</h2>
