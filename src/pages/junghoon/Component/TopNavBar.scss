@@ -1,0 +1,22 @@
+.title {
+  display: flex;
+  margin: 15px  20px;
+  justify-content: space-between;
+  background-color: rgb(241, 234, 226);
+
+  .logo {
+    margin: auto;
+    margin-left: 20px;
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+  }
+  .sideMenu {
+    display: flex;
+    margin: 20px;
+    align-items: center;
+    gap: 30px;
+    font-weight: 500;
+    list-style: none;
+    color: rgb(80, 51, 51);
+  }
+}

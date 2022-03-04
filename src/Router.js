@@ -15,6 +15,11 @@ import ListSubin from './pages/subin/pages/list/List';
 import LoginDami from './pages/dami/Login/Login';
 import DetailDami from './pages/dami/Detail/Detail';
 import ListDami from './pages/dami/List/List';
+// 정훈's 컴포넌트
+
+import LoginJunghoon from './pages/junghoon/Login/Login';
+import DetailJunghoon from './pages/junghoon/Detail/Detail';
+import ListJunghoon from './pages/junghoon/List/List';
 
 function Router() {
   return (
