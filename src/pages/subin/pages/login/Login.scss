@@ -70,30 +70,16 @@ $inner-border: 1px solid #cccccc;
       color: #779db6;
     }
   }
+
+  .active {
+    &:focus {
+      outline: 1px solid green;
+    }
+  }
+
+  .inActive {
+    &:focus {
+      outline: 1px solid red;
+    }
+  }
 }
-
-// /* id,pw active toggle */
-// .active {
-//     border: 1px solid green;
-// }
-
-// .active:focus {
-//     outline: 1px solid green;
-// }
-
-// .inActive:focus {
-//     outline: 2px solid red;
-// }
-
-/* password hide / show toggle */
-// .eye {
-//     position: absolute;
-//     top: 15px;
-//     right: 26px;
-//     height: 20px;
-//     cursor: pointer;
-// }
-
-// .fa-eye {
-//     right: 27px;
-// }
