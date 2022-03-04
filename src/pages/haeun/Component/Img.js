@@ -1,13 +1,12 @@
 import React from 'react';
 
-const Img = (props) => (
-            <>
-            <div className="imgDiv">
-                <img src={props.img} 
-                    alt="coffee"/>
-            </div>
-            <p>오늘의 커피 ♡</p>
-            </>
-    );
+const Img = props => (
+  <>
+    <div className="imgDiv">
+      <img src={props.imgURL} alt="coffee" />
+    </div>
+    <p>{props.name}</p>
+  </>
+);
 
 export default Img;

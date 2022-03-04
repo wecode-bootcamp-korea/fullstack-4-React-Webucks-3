@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "type": "cold brew",
+    "name": "나이트로 바닐라 크림",
+    "imgURL": "",
+    "isLike": true
+  },
+  {
+    "id": 2,
+    "type": "cold brew",
+    "name": "나이트로 콜드 브루",
+    "imgURL": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000479]_20210426091843897.jpg",
+    "isLike": true
+  },
+  {
+    "id": 3,
+    "type": "cold brew",
+    "name": "돌체 콜드 브루",
+    "imgURL": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000002081]_20210415133656839.jpg",
+    "isLike": true
+  },
+  {
+    "id": 4,
+    "type": "cold brew",
+    "name": "바닐라 크림 콜드 브루",
+    "imgURL": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000487]_20210430112319040.jpg",
+    "isLike": true
+  },
+  {
+    "id": 5,
+    "type": "cold brew",
+    "name": "벨벳 다크 모카 나이트로",
+    "imgURL": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/03/[9200000003509]_20210322093452399.jpg",
+    "isLike": true
+  },
+  {
+    "id": 6,
+    "type": "cold brew",
+    "name": "시그니처 더 블랙 콜드 브루",
+    "imgURL": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/08/[9200000003661]_20210819094346176.jpg",
+    "isLike": true
+  },
+  {
+    "id": 7,
+    "type": "cold brew",
+    "name": "제주 비자림 콜드 브루",
+    "imgURL": "https://image.istarbucks.co.kr/upload/store/skuimg/2020/09/[9200000002672]_20200921171223898.jpg",
+    "isLike": true
+  },
+  {
+    "id": 8,
+    "type": "cold brew",
+    "name": "콜드 브루",
+    "imgURL": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000000038]_20210430113202458.jpg",
+    "isLike": true
+  },
+
+  {
+    "id": 9,
+    "type": "cold brew",
+    "name": "콜드 브루 몰트",
+    "imgURL": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/02/[9200000001636]_20210225093600536.jpg",
+    "isLike": true
+  },
+  {
+    "id": 10,
+    "type": "cold brew",
+    "name": "콜드 브루 오트 라떼",
+    "imgURL": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000003285]_20210416154437069.jpg",
+    "isLike": true
+  },
+
+  {
+    "id": 11,
+    "type": "brewed",
+    "name": "아이스 커피",
+    "imgURL": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[106509]_20210430111852870.jpg",
+    "isLike": true
+  },
+
+  {
+    "id": 12,
+    "type": "brewed",
+    "name": "오늘의 커피",
+    "imgURL": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[2]_20210430111934117.jpg",
+    "isLike": true
+  }
+]
