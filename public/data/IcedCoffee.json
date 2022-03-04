@@ -14,12 +14,12 @@
       { "id": 5, "name": "당류 (g)", "amount": 0 },
       { "id": 6, "name": "카페인 (mg)", "amount": 140 }
     ],
-    "allergie": "null",
+    "allergie": null,
     "comments": [
       { "id": 1, "writer": "abcde", "comment": "" },
       { "id": 2, "writer": "fgerty", "comment": "" },
       { "id": 2, "writer": "fgerty", "comment": "" }
     ],
-    "imgURL": "./images/11.png"
+    "imgURL": "https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[106509]_20210430111852870.jpg"
   }
 ]

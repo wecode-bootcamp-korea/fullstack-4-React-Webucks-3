@@ -5,7 +5,7 @@ import './Detail.scss';
 
 function DetailJugnhoon() {
   return (
-    <div>
+    <div className="DetailJunghoon">
       <TopNavBar />
 
       <div>
