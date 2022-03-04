@@ -8,6 +8,7 @@ function ListDami() {
 
   //선언
   return (
+  <div class="listDami">
     <div id="wrap">
      <TopnavDami />
       <header>
@@ -137,6 +138,7 @@ function ListDami() {
         </div>
       </div>
     </div>
+  </div>
   );
 }
 

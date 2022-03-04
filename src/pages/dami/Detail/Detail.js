@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import "./Detail.scss";
-import TopnavDami from "../Components/Nav/Topnav";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import './Detail.scss';
+import TopnavDami from '../Components/Nav/Topnav';
 // import { TopnavDami } from "..Components/Nav/Topnav"
 
 function DetailDami() {
@@ -9,11 +9,11 @@ function DetailDami() {
 
   //선언
   return (
-    <div>
+    <div class="detailDami">
       <TopnavDami />
       <section className="menuName">콜드브루</section>
       <section className="menuTree">
-        {"홈 > MENU > 음료 > 에스프레소 > 화이트 초콜릿 모카"}
+        {'홈 > MENU > 음료 > 에스프레소 > 화이트 초콜릿 모카'}
       </section>
 
       <section className="productDesc">
