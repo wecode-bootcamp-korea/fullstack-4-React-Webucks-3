@@ -81,6 +81,7 @@
       }
 
       /* nutrition section */
+
       .nutriPreview {
         display: flex;
         justify-content: space-between;
@@ -93,10 +94,11 @@
         display: flex;
         justify-content: space-between;
         margin: 15px 0;
+        width: 616px;
 
         .nutriWrapper {
           padding: 10px 10px;
-          width: 308px;
+          flex: 1;
 
           &:nth-child(2) {
             border-left: 1px dashed #cccccc;
