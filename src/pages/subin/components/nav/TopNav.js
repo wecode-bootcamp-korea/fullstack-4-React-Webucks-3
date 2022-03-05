@@ -1,25 +1,36 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './TopNav.scss';
 
 function TopNav() {
   return (
     <div className="TopNavSubin">
       <header>
-        <h2 className="title">WeBucks</h2>
+        <Link to="/" className="title">
+          WeBucks
+        </Link>
         <nav>
           <ul>
             {/* a 태그를 div로 임시 변경함 */}
             <li>
-              <div>COFFEE</div>
+              <Link to="#" className="navMenu">
+                COFFEE
+              </Link>
             </li>
             <li>
-              <div>MENU</div>
+              <Link to="#" className="navMenu">
+                MENU
+              </Link>
             </li>
             <li>
-              <div>STORE</div>
+              <Link to="#" className="navMenu">
+                STORE
+              </Link>
             </li>
             <li>
-              <div>WHAT'S NEW</div>
+              <Link to="#" className="navMenu">
+                WHAT'S NEW
+              </Link>
             </li>
           </ul>
         </nav>
