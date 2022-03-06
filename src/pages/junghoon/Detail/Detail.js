@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import TopNavBar from '../Component/TopNavBar';
 
 import './Detail.scss';
 
 function DetailJugnhoon() {
+  const [coffeeDetail, setCoffeeDetail] = useState({
+    id: 0,
+    name: '',
+    EnglisName: '',
+    desc: '',
+    size: '',
+    volume: '',
+    nutrition: [],
+    allergie: '',
+    conments: [],
+    imgURL: 'http://000',
+  });
+
+  useEffect(() => {}, []);
+
   return (
     <div className="DetailJunghoon">
       <TopNavBar />

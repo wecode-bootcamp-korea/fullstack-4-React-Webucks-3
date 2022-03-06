@@ -28,8 +28,8 @@ function Router() {
         <Route path="/list-subin" element={<ListSubin />} />
         <Route path="/detail-subin" element={<DetailSubin />} />
         <Route path="/login-junghoon" element={<LoginJunghoon />} />
-        <Route path="/List-junghoon" element={<ListJunghoon />} />
-        <Route path="/Detail-junghoon" element={<DetailJunghoon />} />
+        <Route path="/list-junghoon" element={<ListJunghoon />} />
+        <Route path="/detail-junghoon" element={<DetailJunghoon />} />
       </Routes>
     </BrowserRouter>
   );

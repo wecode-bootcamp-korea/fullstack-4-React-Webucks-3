@@ -2,13 +2,7 @@
   width: max-content;
   margin: auto;
 
-  .container {
-    width: 80%;
-    margin: 0 auto;
-  }
-
   .menuTitle {
-    margin: 0 20px;
     margin-top: 20px;
     padding: 10px 0px 10px 20px;
     display: flex;
@@ -36,31 +30,31 @@
   .menuColdBrew {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 20px 20px 20px 20px;
+    margin: 20px 0px;
     gap: 20px;
     text-align: center;
     font-weight: bold;
 
-    .overflow {
-      width: 300px;
+    div div {
       height: 300px;
       overflow: hidden;
     }
 
-    .coffee_img {
+    img {
       width: 300px;
       height: 300px;
       transform: scale(1);
     }
 
-    .coffee_img:hover {
+    img:hover {
       transform: scale(1.1);
       transition: all 0.5s ease-in-out;
     }
 
-    .coffee_name {
+    .coffeeName {
+      display: block;
       text-decoration: none;
-      margin-top: 15px;
+      margin-top: 20px;
     }
 
     a:link {
