@@ -1,24 +1,23 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './CoffeeCard.scss';
-import ListDami from '../List';
 
-function CoffeeCardDami({ data }) {
+function CoffeeCardDami({ coffeeSummary }) {
   const navigate = useNavigate();
 
   return (
-    <div class="bigContainer" key={data.key}>
+    <div class="bigContainer">
       <div class="imageFixed">
         <img
           onClick={() => {
-            navigate('/coffee/ + {data.id}');
+            navigate('/coffee/' + coffeeSummary.id);
           }}
-          alt={data.name}
+          alt={coffeeSummary.name}
           class="coffeeImage"
-          src={data.imgURL}
+          src={coffeeSummary.imgURL}
         />
       </div>
-      <div class="productName">{data.name}</div>
+      <div class="productName">{coffeeSummary.name}</div>
     </div>
   );
 }

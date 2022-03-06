@@ -2,6 +2,7 @@ import './List.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMugHot } from '@fortawesome/free-solid-svg-icons';
 import TopnavDami from '../Components/Nav/Topnav';
+import CoffeeCardDami from './CoffeeCard/CoffeeCard';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -40,23 +41,9 @@ function ListDami() {
         </header>
         {/* 여기서부터 map 돌려서 리스트 뿌리기 */}
         <div className="imageSection">
-          {coldBrewType.map(coffeeSummary => {
-            return (
-              <div class="bigContainer">
-                <div class="imageFixed">
-                  <img
-                    onClick={() => {
-                      navigate('/coffee/' + coffeeSummary.id);
-                    }}
-                    alt="커피이미지"
-                    class="coffeeImage"
-                    src={coffeeSummary.imgURL}
-                  />
-                </div>
-                <div class="productName">{coffeeSummary.name}</div>
-              </div>
-            );
-          })}
+          {coldBrewType.map(coffeeSummary => (
+            <CoffeeCardDami coffeeSummary={coffeeSummary} />
+          ))}
         </div>
         <header class="categoryHeader">
           <div className="coldBrew">
@@ -68,23 +55,9 @@ function ListDami() {
           </div>
         </header>
         <div className="imageSectionTwo">
-          {brewedType.map(coffeeSummary => {
-            return (
-              <div class="bigContainer">
-                <div class="imageFixed">
-                  <img
-                    onClick={() => {
-                      navigate('/coffee' + coffeeSummary.id);
-                    }}
-                    alt="커피이미지"
-                    class="coffeeImage"
-                    src={coffeeSummary.imgURL}
-                  />
-                </div>
-                <div class="productName">{coffeeSummary.name}</div>
-              </div>
-            );
-          })}
+          {brewedType.map(coffeeSummary => (
+            <CoffeeCardDami coffeeSummary={coffeeSummary} />
+          ))}
         </div>
       </div>
     </div>

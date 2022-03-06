@@ -1,175 +1,176 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Nanum+Gothic:wght@700&display=swap');
 
 .detailDami {
+  width: 1200px;
+  margin: 0px 80px;
+
   .menuName {
     font-family: 'Nanum Gothic', sans-serif;
     font-size: x-large;
     padding-left: 5%;
-    margin-top: 5px;
+    margin-top: 20px;
   }
 
   .menuTree {
+    display: flex;
+    justify-content: flex-end;
     font-size: small;
     text-align: right;
-    margin-right: 170px;
     padding-bottom: 10px;
     color: #a0a0a0;
   }
 
   .productDesc {
     display: flex;
+    justify-content: space-between;
+  }
+
+  p {
+    display: inline;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+  }
+
+  //product desc영역
+  .detailImg {
+    width: 500px;
+    height: 500px;
+  }
+
+  .productName {
+    font-family: 'Nanum Gothic', sans-serif;
+    display: inline;
+  }
+
+  #like {
+    color: lightgray;
+    position: absolute;
+    padding-left: 420px;
+    padding-top: 10px;
+  }
+
+  .productEnglishName {
+    font-size: small;
+    margin-bottom: 20px;
+  }
+
+  .boldLine {
+    border: 0;
+    height: 2px;
+    background: black;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+  }
+
+  .menuDesc {
+    width: 500px;
+    font-size: small;
+    padding: 10px 0px;
+  }
+
+  .size {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 10px 0px;
+  }
+
+  .nutriTable {
+    display: flex;
     justify-content: space-around;
-    margin-right: 100px;
+    margin-top: 10px;
+  }
 
-    p {
-      display: inline;
-    }
+  .nutriBox1 {
+    padding: 5px;
+    width: 280px;
+  }
 
-    hr {
-      border: 0;
-      height: 1px;
-      background: #ccc;
-    }
+  .nutriOneline {
+    font-size: small;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
 
-    //product desc영역
-    .detailImg {
-      width: 500px;
-      height: 500px;
-    }
+  .nutriValue {
+    text-align: right;
+  }
 
-    .productName {
-      font-family: 'Nanum Gothic', sans-serif;
-      display: inline;
-    }
+  .nutriBox2 {
+    padding: 5px;
+    width: 280px;
+    border-left: 1px dashed lightgray;
+  }
 
-    #like {
-      color: lightgray;
-      position: absolute;
-      padding-left: 420px;
-      padding-top: 10px;
-    }
+  .nutriOneline {
+    font-size: small;
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .productEnglishName {
-      font-size: small;
-      margin-bottom: 20px;
-    }
+  .nutriValue {
+    text-align: right;
+  }
 
-    .boldLine {
-      border: 0;
-      height: 2px;
-      background: black;
-    }
+  .allergie {
+    background-color: #efefef;
+    padding: 10px 0px 10px 5px;
+    border-radius: 5px;
+    font-size: small;
+    margin-top: 10px;
+  }
 
-    hr {
-      border: 0;
-      height: 1px;
-      background: #ccc;
-    }
+  .reviewSection {
+    font-size: small;
+  }
 
-    .menuDesc {
-      width: 500px;
-      font-size: small;
-      padding: 10px 0px;
-    }
+  .review {
+    margin-top: 50px;
+    font-size: large;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
 
-    .size {
-      display: flex;
-      justify-content: space-between;
-      font-family: 'Nanum Gothic', sans-serif;
-    }
+  .reviewLine {
+    padding-top: 10px;
+    max-width: 500px;
+  }
 
-    .nutriTable {
-      display: flex;
-      justify-content: space-around;
+  .reviewId {
+    font-weight: bolder;
+  }
 
-      .nutriBox1 {
-        padding: 5px;
-        width: 280px;
-
-        .nutriOneline {
-          font-size: small;
-          display: flex;
-          justify-content: space-between;
-
-          .nutriValue {
-            text-align: right;
-          }
-        }
-      }
-
-      .nutriBox2 {
-        padding: 5px;
-        width: 280px;
-        border-left: 1px dashed lightgray;
-
-        .nutriOneline {
-          font-size: small;
-          display: flex;
-          justify-content: space-between;
-
-          .nutriValue {
-            text-align: right;
-          }
-        }
-      }
-    }
-
-    .allergie {
-      background-color: #efefef;
-      padding: 10px 0px 10px 5px;
-      border-radius: 5px;
-      font-size: small;
-    }
-
-    .reviewSection {
-      font-size: small;
-    }
-
-    .review {
-      margin-top: 50px;
-      font-size: large;
-      font-family: 'Nanum Gothic', sans-serif;
-
-      .reviewLine {
-        padding-top: 5px;
-
-        .reviewId {
-          font-weight: 800;
-        }
-      }
-
-      .reviewBox {
-        margin-top: 15px;
-        background-color: #efefef;
-        border: 0;
-        padding: 10px;
-        width: 570px;
-      }
-    }
+  .reviewBox {
+    margin-top: 15px;
+    background-color: #efefef;
+    border: 0;
+    padding: 10px;
+    width: 570px;
   }
 
   footer {
     background-color: #333333;
-
-    .footerTree {
-      color: white;
-      display: flex;
-      justify-content: space-around;
-      margin: 10px 0px;
-      font-size: small;
-      padding: 10px 50px;
-
-      li {
-        margin-top: 10px;
-        list-style: none;
-      }
-    }
   }
 
-  // .footerTree div {
-  //   padding-top: 10px;
-  // }
+  .footerTree {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0px;
+    font-size: small;
+    padding: 10px 50px;
+  }
 
-  // .footerMenu {
-  //   text-align: center;
+  li {
+    margin-top: 22px;
+    list-style: none;
+  }
 }

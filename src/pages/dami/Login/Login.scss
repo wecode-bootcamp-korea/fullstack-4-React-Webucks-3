@@ -66,4 +66,22 @@
     font-size: 10px;
     font-weight: bold;
   }
+  .disabledBtn {
+    width: 80%;
+    border: none;
+    height: 35px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    color: white;
+    background-color: #add3ea;
+  }
+  .abledBtn {
+    width: 80%;
+    border: none;
+    height: 35px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    color: white;
+    background-color: #0095f6;
+  }
 }

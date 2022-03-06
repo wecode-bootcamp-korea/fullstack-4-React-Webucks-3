@@ -42,7 +42,6 @@ function DetailDami() {
         setData(res);
       });
   }, []);
-  const n = params.id;
 
   //선언
   return (
@@ -50,7 +49,7 @@ function DetailDami() {
       <TopnavDami />
       <h1 className="menuName">{data.category}</h1>
       <section className="menuTree">
-        `홈 > MENU > 음료 > 에스프레소 > {data.name}`
+        홈 > MENU > 음료 > 에스프레소 > {data.name}
       </section>
       <section className="productDesc">
         <img alt={data.name} className="detailImg" src={data.imgURL} />
@@ -87,7 +86,7 @@ function DetailDami() {
               <div className="nutrioneLine">
                 <div className="nutriOneline">
                   <p> 나트륨 (mg) </p>
-                  <p className="nutriValue">{data.nutrition[n].amount}</p>
+                  <p className="nutriValue">333</p>
                 </div>
               </div>
               <div className="nutriOneline">
