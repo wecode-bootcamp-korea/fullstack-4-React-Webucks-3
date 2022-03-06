@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Nanum+Gothic:wght@700&display=swap');
+
+.footerWrap {
+  .footerTree {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0px;
+    font-size: small;
+    padding: 10px 50px;
+    background-color: #333333;
+  }
+
+  ul,
+  li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+}

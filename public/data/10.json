@@ -20,6 +20,7 @@
       { "id": 2, "writer": "fgerty", "comment": "" },
       { "id": 2, "writer": "fgerty", "comment": "" }
     ],
-    "imgURL": "./images/10.png"
+    "imgURL": "./images/10.png",
+    "category": "콜드 브루"
   }
 ]

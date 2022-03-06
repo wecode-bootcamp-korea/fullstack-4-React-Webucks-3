@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import './Detail.scss';
 import TopnavDami from '../Components/Nav/Topnav';
+import FooterDami from '../Footer/Footer';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 // import { TopnavDami } from "..Components/Nav/Topnav"
@@ -9,58 +10,62 @@ import { useParams } from 'react-router-dom';
 function DetailDami() {
   //선언할 때 필요한 재료들을 만들기
   const params = useParams();
-  const [coffeeDetail, setCoffeeDetail] = useState({
+  const [data, setData] = useState({
     id: 0,
     name: '',
     EnglishName: '',
     desc: '',
     size: '',
     volume: '',
-    nutrition: [{}, {}, {}, {}, {}, {}],
-    allergie: '',
-    comments: [{}, {}, {}],
-    imgURL: './images/10.png',
+    nutrition: [
+      { id: 1, name: '1회 제공량 (kcal)', amount: 0 },
+      { id: 2, name: '포화지방 (g)', amount: 0 },
+      { id: 3, name: '단백질 (g)', amount: 0 },
+      { id: 4, name: '나트륨 (mg)', amount: 0 },
+      { id: 5, name: '당류 (g)', amount: 0 },
+      { id: 6, name: '카페인 (mg)', amount: 0 },
+    ],
+    allergie: 'milk',
+    comments: [
+      { id: 1, writer: 'abcde', comment: '' },
+      { id: 2, writer: 'fgerty', comment: '' },
+      { id: 3, writer: 'fgerty', comment: '' },
+    ],
+    imgURL: '',
+    category: '',
   });
 
   useEffect(() => {
-    fetch(`data/${params.id}.json`, {
-      method: 'GET',
-    })
+    fetch(`/data/${params.id}.json`)
       .then(res => res.json())
-      .then(data => {
-        setCoffeeDetail(data);
+      .then(res => {
+        setData(res);
       });
   }, []);
+  const n = params.id;
 
   //선언
   return (
-    <div class="detailDami">
+    <div className="detailDami">
       <TopnavDami />
-      <h1 className="menuName">{coffeeDetail.id}</h1>
+      <h1 className="menuName">{data.category}</h1>
       <section className="menuTree">
-        {'홈 > MENU > 음료 > 에스프레소 > 화이트 초콜릿 모카'}
+        `홈 > MENU > 음료 > 에스프레소 > {data.name}`
       </section>
       <section className="productDesc">
-        <img
-          alt="클릭한 커피의 상세이미지"
-          className="detailImg"
-          src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000002487]_20210426091745467.jpg"
-        />
+        <img alt={data.name} className="detailImg" src={data.imgURL} />
         <section>
-          <p className="productName"> 화이트 초콜릿 모카 </p>
+          <p className="productName"> {data.name} </p>
           <FontAwesomeIcon id="like" icon={faHeart} />
-          <div className="productEnglishName"> White Chocolate Mocha </div>
+          <div className="productEnglishName"> {data.EnglishName}</div>
           <hr className="boldLine" />
-          <div className="menuDesc">
-            달콤하고 부드러운 화이트 초콜릿 시럽과 에스프레소를 스팀 밀크와 섞어
-            휘핑크림으로 마무리한 음료로
-            <br />
-            달콤함과 강렬한 에스프레소가 부드럽게 어우러진 커피
-          </div>
+          <div className="menuDesc">{data.desc}</div>
           <hr />
           <div className="size">
             <p> 제품 영양 정보</p>
-            <p> Tall(톨) / 355ml (12 fl oz) </p>
+            <p>
+              {data.size} <span>/</span> {data.volume}
+            </p>
           </div>
           <hr />
           <section className="nutriTable">
@@ -82,7 +87,7 @@ function DetailDami() {
               <div className="nutrioneLine">
                 <div className="nutriOneline">
                   <p> 나트륨 (mg) </p>
-                  <p className="nutriValue">150</p>
+                  <p className="nutriValue">{data.nutrition[n].amount}</p>
                 </div>
               </div>
               <div className="nutriOneline">
@@ -95,7 +100,9 @@ function DetailDami() {
               </div>
             </section>
           </section>
-          <section className="allergie">알레르기 유발 요인 : 우유</section>
+          <section className="allergie">
+            알레르기 유발 요인 : {data.allergie}
+          </section>
           <section className="reviewSection">
             <div className="review">리뷰</div>
             <hr />
@@ -115,42 +122,7 @@ function DetailDami() {
           </section>
         </section>
       </section>
-      <footer>
-        <section className="footerTree">
-          <ul>
-            COMPANY
-            <li>한눈에 보기</li>
-            <li>스타벅스 사명</li>
-            <li>스타벅스 소개</li>
-            <li>국내 뉴스룸</li>
-            <li>세계의 스타벅스</li>
-            <li>글로벌 뉴스룸</li>
-          </ul>
-          <ul>
-            CORPORATE SALES
-            <li>단체 및 기업 구매 안내</li>
-          </ul>
-          <ul>
-            PARTNERSHIP
-            <li>신규 입점 제의</li>
-            <li>협력 고객사 등록 신청</li>
-          </ul>
-          <ul>
-            ONLINE COMMUNITY
-            <li>페이스북</li>
-            <li>트위터</li>
-            <li>유튜브</li>
-            <li>블로그</li>
-            <li>인스타그램</li>
-          </ul>
-          <ul>
-            RECRUIT
-            <li>채용 소개</li>
-            <li>채용 지원하기</li>
-          </ul>
-          <ul>WEBUCKS</ul>
-        </section>
-      </footer>
+      <FooterDami />
     </div>
   );
 }

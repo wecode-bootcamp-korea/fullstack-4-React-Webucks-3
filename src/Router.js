@@ -17,6 +17,8 @@ import DetailDami from './pages/dami/Detail/Detail';
 import ListDami from './pages/dami/List/List';
 import TopnavDami from './pages/dami/Components/Nav/Topnav';
 import Test from './pages/dami/Test/Test';
+import FooterDami from './pages/dami/Footer/Footer';
+import CoffeeCardDami from './pages/dami/List/CoffeeCard/CoffeeCard';
 
 // 정훈's 컴포넌트
 // import LoginJunghoon from './pages/junghoon/Login/Login';
@@ -45,6 +47,8 @@ function Router() {
         {/* <Route path="/detail-dami" element={<DetailDami />} /> */}
         <Route path="/nav-dami" element={<TopnavDami />} />
         <Route path="/test" element={<Test />} />
+        <Route path="/footer-dami" element={<FooterDami />} />
+        <Route path="/coffeecard-dami" element={<CoffeeCardDami />} />
       </Routes>
     </BrowserRouter>
   );

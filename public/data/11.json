@@ -20,6 +20,7 @@
       { "id": 2, "writer": "fgerty", "comment": "" },
       { "id": 2, "writer": "fgerty", "comment": "" }
     ],
-    "imgURL": "./images/11.png"
+    "imgURL": "./images/11.png",
+    "category": "브루드 커피"
   }
 ]

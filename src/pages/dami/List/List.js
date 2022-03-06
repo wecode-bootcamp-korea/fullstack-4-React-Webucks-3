@@ -17,6 +17,13 @@ function ListDami() {
       });
   }, []);
 
+  const coldBrewType = coffeeList.filter(
+    coffeeSummary => coffeeSummary.type === 'coldBrew'
+  );
+  const brewedType = coffeeList.filter(
+    coffeeSummary => coffeeSummary.type === 'brewed'
+  );
+
   //선언
   return (
     <div class="listDami">
@@ -33,24 +40,22 @@ function ListDami() {
         </header>
         {/* 여기서부터 map 돌려서 리스트 뿌리기 */}
         <div className="imageSection">
-          {coffeeList.map(coffeeSummary => {
-            if (coffeeSummary.id < 9) {
-              return (
-                <div class="bigContainer">
-                  <div class="imageFixed">
-                    <img
-                      onClick={() => {
-                        navigate('/coffee' + coffeeSummary.id);
-                      }}
-                      alt="커피이미지"
-                      class="coffeeImage"
-                      src={coffeeSummary.imgURL}
-                    />
-                  </div>
-                  <div class="productName">{coffeeSummary.name}</div>
+          {coldBrewType.map(coffeeSummary => {
+            return (
+              <div class="bigContainer">
+                <div class="imageFixed">
+                  <img
+                    onClick={() => {
+                      navigate('/coffee/' + coffeeSummary.id);
+                    }}
+                    alt="커피이미지"
+                    class="coffeeImage"
+                    src={coffeeSummary.imgURL}
+                  />
                 </div>
-              );
-            }
+                <div class="productName">{coffeeSummary.name}</div>
+              </div>
+            );
           })}
         </div>
         <header class="categoryHeader">
@@ -63,24 +68,22 @@ function ListDami() {
           </div>
         </header>
         <div className="imageSectionTwo">
-          {coffeeList.map(coffeeSummary => {
-            if (coffeeSummary.id > 10) {
-              return (
-                <div class="bigContainer">
-                  <div class="imageFixed">
-                    <img
-                      onClick={() => {
-                        navigate('/coffee' + coffeeSummary.id);
-                      }}
-                      alt="커피이미지"
-                      class="coffeeImage"
-                      src={coffeeSummary.imgURL}
-                    />
-                  </div>
-                  <div class="productName">{coffeeSummary.name}</div>
+          {brewedType.map(coffeeSummary => {
+            return (
+              <div class="bigContainer">
+                <div class="imageFixed">
+                  <img
+                    onClick={() => {
+                      navigate('/coffee' + coffeeSummary.id);
+                    }}
+                    alt="커피이미지"
+                    class="coffeeImage"
+                    src={coffeeSummary.imgURL}
+                  />
                 </div>
-              );
-            }
+                <div class="productName">{coffeeSummary.name}</div>
+              </div>
+            );
           })}
         </div>
       </div>

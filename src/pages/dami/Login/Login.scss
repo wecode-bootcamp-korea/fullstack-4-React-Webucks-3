@@ -7,59 +7,63 @@
     align-items: center;
     height: 700px;
     background-color: lightgray;
+  }
 
-    .loginArea {
-      padding: 0px 20px;
-      background-color: white;
-      border-radius: 3px;
-      border: 1px solid gray;
-      align-content: center;
-      text-align: center;
+  .loginArea {
+    padding: 50px 20px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid gray;
+    text-align: center;
+  }
 
-      .webucksSection {
-        h1 {
-          font-family: 'Dancing Script', cursive;
-          font-size: 80px;
-        }
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    margin-bottom: 50px;
+  }
 
-        .Idsection {
-          .pwInput {
-            width: 80%;
-            height: 30px;
-            border-radius: 5px;
-            border: 2px solid #dddddd;
-            margin-bottom: 15px;
-            background-color: #f7f7f7;
-          }
+  .pwInput {
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #dddddd;
+    margin-bottom: 15px;
+    background-color: #f7f7f7;
+  }
 
-          .idInput {
-            width: 80%;
-            height: 30px;
-            border-radius: 5px;
-            border: 2px solid #dddddd;
-            margin-bottom: 15px;
-            background-color: #f7f7f7;
-          }
+  .idInput {
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #dddddd;
+    margin-bottom: 15px;
+    background-color: #f7f7f7;
+  }
 
-          .loginBtn {
-            width: 80%;
-            border: none;
-            height: 35px;
-            margin-bottom: 50px;
-            border-radius: 8px;
-            color: white;
-            background-color: #add3ea;
-          }
+  .loginBtn {
+    width: 80%;
+    border: none;
+    height: 35px;
+    margin-bottom: 50px;
+    border-radius: 8px;
+    color: white;
+    background-color: #add3ea;
+  }
 
-          .pwForget {
-            margin-bottom: 50px;
-            background-color: white;
-            color: #91aec4;
-            font-size: 10px;
-            font-weight: bold;
-          }
-        }
-      }
-    }
+  .pwForget {
+    margin-bottom: 50px;
+    background-color: white;
+    color: #91aec4;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .pwForget {
+    margin-bottom: 50px;
+    background-color: white;
+    color: #91aec4;
+    font-size: 10px;
+    font-weight: bold;
   }
 }
