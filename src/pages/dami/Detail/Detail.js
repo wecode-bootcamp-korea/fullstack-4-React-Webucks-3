@@ -2,20 +2,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import './Detail.scss';
 import TopnavDami from '../Components/Nav/Topnav';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 // import { TopnavDami } from "..Components/Nav/Topnav"
 
 function DetailDami() {
   //선언할 때 필요한 재료들을 만들기
+  const params = useParams();
+  const [coffeeDetail, setCoffeeDetail] = useState({
+    id: 0,
+    name: '',
+    EnglishName: '',
+    desc: '',
+    size: '',
+    volume: '',
+    nutrition: [{}, {}, {}, {}, {}, {}],
+    allergie: '',
+    comments: [{}, {}, {}],
+    imgURL: './images/10.png',
+  });
+
+  useEffect(() => {
+    fetch(`data/${params.id}.json`, {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(data => {
+        setCoffeeDetail(data);
+      });
+  }, []);
 
   //선언
   return (
     <div class="detailDami">
       <TopnavDami />
-      <section className="menuName">콜드브루</section>
+      <h1 className="menuName">{coffeeDetail.id}</h1>
       <section className="menuTree">
         {'홈 > MENU > 음료 > 에스프레소 > 화이트 초콜릿 모카'}
       </section>
-
       <section className="productDesc">
         <img
           alt="클릭한 커피의 상세이미지"

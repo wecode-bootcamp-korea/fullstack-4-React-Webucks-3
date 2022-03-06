@@ -1,11 +1,11 @@
-import './List.scss';
+import './Test.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMugHot } from '@fortawesome/free-solid-svg-icons';
 import TopnavDami from '../Components/Nav/Topnav';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function ListDami() {
+function Test() {
   const navigate = useNavigate();
   const [coffeeList, setCoffeeList] = useState([]);
 
@@ -88,4 +88,4 @@ function ListDami() {
   );
 }
 
-export default ListDami;
+export default Test;

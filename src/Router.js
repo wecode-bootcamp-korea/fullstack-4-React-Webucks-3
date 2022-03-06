@@ -15,11 +15,13 @@ import ListSubin from './pages/subin/pages/list/List';
 import LoginDami from './pages/dami/Login/Login';
 import DetailDami from './pages/dami/Detail/Detail';
 import ListDami from './pages/dami/List/List';
-// 정훈's 컴포넌트
+import TopnavDami from './pages/dami/Components/Nav/Topnav';
+import Test from './pages/dami/Test/Test';
 
-import LoginJunghoon from './pages/junghoon/Login/Login';
-import DetailJunghoon from './pages/junghoon/Detail/Detail';
-import ListJunghoon from './pages/junghoon/List/List';
+// 정훈's 컴포넌트
+// import LoginJunghoon from './pages/junghoon/Login/Login';
+// import DetailJunghoon from './pages/junghoon/Detail/Detail';
+// import ListJunghoon from './pages/junghoon/List/List';
 
 function Router() {
   return (
@@ -28,16 +30,21 @@ function Router() {
         <Route path="/login-haeun" element={<LoginHaeun />} />
         <Route path="/list-haeun" element={<ListHaeun />} />
         <Route path="/detail-haeun" element={<DetailHaeun />} />
+
         <Route path="/login-subin" element={<LoginSubin />} />
         <Route path="/list-subin" element={<ListSubin />} />
         <Route path="/detail-subin" element={<DetailSubin />} />
-        <Route path="/" element={<LoginJunghoon />} />
+
+        {/* <Route path="/Logon" element={<LoginJunghoon />} />
         <Route path="/List" element={<ListJunghoon />} />
-        <Route path="/List/Detail" element={<DetailJunghoon />} />
+        <Route path="/List/Detail" element={<DetailJunghoon />} /> */}
 
         <Route path="/login-dami" element={<LoginDami />} />
-        <Route path="/list-dami" element={<ListDami />} />
-        <Route path="/detail-dami" element={<DetailDami />} />
+        <Route path="/coffee" element={<ListDami />} />
+        <Route path="/coffee/:id" element={<DetailDami />} />
+        {/* <Route path="/detail-dami" element={<DetailDami />} /> */}
+        <Route path="/nav-dami" element={<TopnavDami />} />
+        <Route path="/test" element={<Test />} />
       </Routes>
     </BrowserRouter>
   );
