@@ -43,6 +43,11 @@ function DetailDami() {
       });
   }, []);
 
+  const nutriLeftBox = data.nutrition.slice(0, 3);
+  const nutriRightBox = data.nutrition.slice(3, 7);
+  console.log(nutriLeftBox);
+  console.log(nutriRightBox);
+
   //선언
   return (
     <div className="detailDami">
@@ -69,54 +74,39 @@ function DetailDami() {
           <hr />
           <section className="nutriTable">
             <div className="nutriBox1">
-              <div className="nutriOneline">
-                <p>1회 제공량 (kcal)</p>
-                <p className="nutriValue"> 345 </p>
-              </div>
-              <div className="nutriOneline">
-                <p> 포화지방(g) </p>
-                <p className="nutriValue">11</p>
-              </div>
-              <div className="nutriOneline">
-                <p> 단백질(g) </p>
-                <p className="nutriValue">11</p>
-              </div>
+              {nutriLeftBox.map(nutri => (
+                <div class="nutriLeft">
+                  <div className="nutriOneline">
+                    {nutri.name}
+                    <div className="nutriValue"> {nutri.amount} </div>
+                  </div>
+                </div>
+              ))}
             </div>
             <section className="nutriBox2">
-              <div className="nutrioneLine">
-                <div className="nutriOneline">
-                  <p> 나트륨 (mg) </p>
-                  <p className="nutriValue">333</p>
+              {nutriRightBox.map(nutri => (
+                <div class="nutriLeft">
+                  <div className="nutriOneline">
+                    {nutri.name}
+                    <div className="nutriValue"> {nutri.amount} </div>
+                  </div>
                 </div>
-              </div>
-              <div className="nutriOneline">
-                <p> 당류 (g) </p>
-                <p className="nutriValue">35</p>
-              </div>
-              <div className="nutriOneline">
-                <p> 카페인 (mg) </p>
-                <p className="nutriValue">75</p>
-              </div>
+              ))}
             </section>
           </section>
           <section className="allergie">
-            알레르기 유발 요인 : {data.allergie}
+            알레르기 유발 요인 :{' '}
+            {data.allergie == 'none' || 'null' ? '없음' : data.allergie}
           </section>
           <section className="reviewSection">
             <div className="review">리뷰</div>
             <hr />
-            <article className="reviewLine">
-              <p className="reviewId">coffee_lover</p> 너무 맛있어요!
-            </article>
-            <article className="reviewLine">
-              <p className="reviewId">CHOCO7</p> 오늘도 화이트 초콜릿 모카를
-              마시러 갑니다.
-            </article>
-            <article className="reviewLine">
-              <p className="reviewId">legend_dev</p> 진짜 화이트 초콜릿 모카는
-              전설이다. 진짜 화이트 초콜릿 모카는 전설이다 <br /> 진짜 화이트
-              초콜릿 모카는 전설이다.
-            </article>
+            {data.comments.map(review => (
+              <div class="reviewLine">
+                <p className="reviewId">{review.writer}</p>
+                {review.comment}
+              </div>
+            ))}
             <input className="reviewBox" placeholder="리뷰를 입력해주세요." />
           </section>
         </section>

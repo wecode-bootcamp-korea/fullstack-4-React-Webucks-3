@@ -84,9 +84,8 @@
   }
 
   .nutriTable {
-    display: flex;
-    justify-content: space-around;
     margin-top: 10px;
+    display: flex;
   }
 
   .nutriBox1 {
@@ -94,15 +93,8 @@
     width: 280px;
   }
 
-  .nutriOneline {
-    font-size: small;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-
   .nutriValue {
-    text-align: right;
+    font-size: small;
   }
 
   .nutriBox2 {
@@ -115,11 +107,13 @@
     font-size: small;
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
   }
 
-  .nutriValue {
-    text-align: right;
-  }
+  // .nutriValue {
+  //   display: block;
+  //   text-align: right;
+  // }
 
   .allergie {
     background-color: #efefef;
@@ -146,6 +140,7 @@
 
   .reviewId {
     font-weight: bolder;
+    margin-right: 5px;
   }
 
   .reviewBox {
@@ -173,4 +168,9 @@
     margin-top: 22px;
     list-style: none;
   }
+  // .nutriLeft {
+  //   border: 1px solid red;
+  //   display: flex;
+  //   justify-content: space-between;
+  // }
 }

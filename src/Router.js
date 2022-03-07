@@ -44,6 +44,8 @@ function Router() {
         <Route path="/login-dami" element={<LoginDami />} />
         <Route path="/coffee" element={<ListDami />} />
         <Route path="/coffee/:id" element={<DetailDami />} />
+        <Route path="/test/:id" element={<Test />} />
+
         {/* <Route path="/detail-dami" element={<DetailDami />} /> */}
         <Route path="/nav-dami" element={<TopnavDami />} />
         <Route path="/test" element={<Test />} />
