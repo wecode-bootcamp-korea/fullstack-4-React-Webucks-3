@@ -15,6 +15,7 @@ function Detail() {
     writer: '',
     comment: '',
   });
+  const { writer, comment } = inputs;
   const [data, setData] = useState({
     id: 0,
     name: '',
@@ -30,7 +31,7 @@ function Detail() {
       { id: 5, name: '당류 (g)', amount: 0 },
       { id: 6, name: '카페인 (mg)', amount: 0 },
     ],
-    allergie: 'milk',
+    allergie: null,
     comments: [
       { id: 1, writer: 'abcde', comment: '' },
       { id: 2, writer: 'fgerty', comment: '' },
@@ -47,10 +48,9 @@ function Detail() {
         setData(res);
         setReviews(res.comments);
       });
-  }, []);
+  }, [params]);
 
-  const { writer, comment } = inputs;
-
+  // 댓글 내용 변경
   const inputChange = e => {
     const { name, value } = e.target;
     setInputs({
@@ -59,6 +59,7 @@ function Detail() {
     });
   };
 
+  // 댓글 추가
   const addReview = () => {
     const newRievew = {
       id: nextId.current,
@@ -73,6 +74,7 @@ function Detail() {
     nextId.current += 1;
   };
 
+  // 댓글 삭제
   const deleteReview = id => {
     setReviews(reviews.filter(review => review.id !== id));
   };
@@ -124,8 +126,8 @@ function Detail() {
             </div>
           </section>
 
-          {/* <!-- allergic section --> */}
-          <section className="allergic">
+          {/* <!-- allergie section --> */}
+          <section className="allergie">
             {data.allergie
               ? `알러지 유발 요인 : ${data.allergie.toUpperCase()}`
               : `알러지 유발 요인 : 없음`}
