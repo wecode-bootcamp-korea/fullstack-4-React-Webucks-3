@@ -9,7 +9,7 @@
     padding: 15px 0 30px 0;
 
     h3 {
-      font-size: 22px;
+      font-size: 23px;
       font-weight: bold;
     }
 
@@ -30,7 +30,7 @@
     max-width: 1024px;
 
     div {
-      &::nth-child(1) {
+      &:nth-child(1) {
         flex-basis: 408px;
       }
       &:nth-child(2) {
@@ -65,7 +65,6 @@
           position: absolute;
           right: 10px;
           bottom: 20px;
-          cursor: pointer;
         }
 
         .engName {
@@ -81,6 +80,7 @@
       }
 
       /* nutrition section */
+
       .nutriPreview {
         display: flex;
         justify-content: space-between;
@@ -93,10 +93,11 @@
         display: flex;
         justify-content: space-between;
         margin: 15px 0;
+        width: 616px;
 
         .nutriWrapper {
           padding: 10px 10px;
-          width: 308px;
+          flex: 1;
 
           &:nth-child(2) {
             border-left: 1px dashed #cccccc;
@@ -114,6 +115,7 @@
       .allergic {
         margin-bottom: 30px;
         padding: 15px 10px;
+
         border-radius: 4px;
         background: #999999;
       }
@@ -129,6 +131,8 @@
 
         .rvContents {
           margin: 15px 0 25px 0;
+          height: 70px;
+          overflow: auto;
 
           .aRv {
             margin-bottom: 8px;
@@ -160,13 +164,32 @@
             }
           }
         }
-
-        input {
-          padding: 10px 10px;
-          width: 616px;
-          border: none;
-          border-radius: 4px;
-          background: #eeeeee;
+        .reviewInputs {
+          input {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background: #eeeeee;
+            &:nth-child(1) {
+              width: 110px;
+            }
+            &:nth-child(2) {
+              margin-left: 10px;
+              width: 420px;
+            }
+          }
+          button {
+            margin-left: 10px;
+            width: 45px;
+            height: 32px;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 6px;
+            background: #dddddd;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 10px;
+          }
         }
       }
     }
@@ -196,19 +219,4 @@
       }
     }
   }
-
-  // /* heart btn toggle */
-  // .btnOff {
-  //     color: black;
-  //     opacity: .2;
-  // }
-
-  // .btnOn {
-  //     color: red;
-  //     opacity: 1;
-  // }
-
-  // .bugFix {
-  //     margin-left: 6px;
-  // }
 }

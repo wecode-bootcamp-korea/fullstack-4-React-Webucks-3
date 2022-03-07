@@ -1,23 +1,42 @@
-import React from "react";
-import "./TopNav.scss"
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './TopNav.scss';
 
 function TopNav() {
-    return (
-        <div className="TopNavSubin">
-        <header>
-        <h2 className="title">WeBucks</h2>
+  return (
+    <div className="TopNavSubin">
+      <header>
+        <Link to="/" className="title">
+          WeBucks
+        </Link>
         <nav>
-            <ul>
-                {/* a 태그를 div로 임시 변경함 */}
-                <li><div>COFFEE</div></li>
-                <li><div>MENU</div></li>
-                <li><div>STORE</div></li>
-                <li><div>WHAT'S NEW</div></li>
-            </ul>
+          <ul>
+            {/* a 태그를 div로 임시 변경함 */}
+            <li>
+              <Link to="#" className="navMenu">
+                COFFEE
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="navMenu">
+                MENU
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="navMenu">
+                STORE
+              </Link>
+            </li>
+            <li>
+              <Link to="#" className="navMenu">
+                WHAT'S NEW
+              </Link>
+            </li>
+          </ul>
         </nav>
-    </header>
+      </header>
     </div>
-    )
+  );
 }
 
 export default TopNav;
