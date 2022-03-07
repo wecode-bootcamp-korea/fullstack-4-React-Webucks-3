@@ -7,7 +7,7 @@ function List() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch('./data/coffeeList.json')
+    fetch('/data/coffeeList.json')
       .then(res => res.json())
       .then(res => setData(res));
   }, []);
