@@ -16,7 +16,7 @@ function LoginJugnhoon() {
             />
             <input className="pw" type="password" placeholder="비밀번호" />
             <Link
-              to="./List"
+              to="/list-junghoon"
               className="loginBtn"
               disabled="disabled"
               type="button"

@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import TopNavBar from '../Component/TopNavBar';
-import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 import './List.scss';
+import CoffeeList from '../Component/CoffeeList';
+import TopNavBar from '../Component/TopNavBar';
 
 function ListJugnhoon() {
-  const [coffeeList, setCoffeList] = useState([]);
+  const [coldbrew, setColdbrew] = useState([]);
+  const [brewed, setBrewed] = useState([]);
 
   useEffect(() => {
     fetch('/data/coffeeList.json')
       .then(res => res.json())
       .then(data => {
-        setCoffeList(data);
+        setColdbrew(data.filter(e => e.type === 'coldbrew'));
+        setBrewed(data.filter(e => e.type === 'brewed'));
       });
   }, []);
 
@@ -25,19 +27,16 @@ function ListJugnhoon() {
           디카페인 에스프레소 샷 추가 가능(일부 음료 제외)
         </h3>
       </section>
-      <section className="menuColdBrew">
-        {coffeeList.map(coffeeSummary => {
-          if (coffeeSummary.type === 'coldbrew')
-            return (
-              <div>
-                <div>
-                  <img src={coffeeSummary.imgURL} />
-                </div>
-                <span className="coffeeName">{coffeeSummary.name}</span>
-              </div>
-            );
-        })}
+      <CoffeeList coffeeList={coldbrew} />
+
+      <section className="menuTitle">
+        <h2 className="menu_1st">브루드 커피 </h2>
+        <i className="fa-solid fa-mug-hot"></i>
+        <h3 className="menual">
+          디카페인 에스프레소 샷 추가 가능(일부 음료 제외)
+        </h3>
       </section>
+      <CoffeeList coffeeList={brewed} />
     </div>
   );
 }
@@ -182,4 +181,5 @@ export default ListJugnhoon;
   </div>
   <div className="coffee_name">오늘의 커피 ♡</div>
 </span>
-</section> */
+</section> 
+*/
