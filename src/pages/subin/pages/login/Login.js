@@ -16,25 +16,19 @@ function Login() {
 
   // ID 값 변경 및 활성화
   const handleIdInput = e => {
-    const { value, classList } = e.target;
+    const { value } = e.target;
     setId({ value: value });
     if (value.includes('@')) {
       setId({ value: value, isActive: true });
-      classList.replace('inActive', 'active');
-    } else {
-      classList.replace('active', 'inActive');
     }
   };
 
   // PW 값 변경 및 활성화
   const handlePwInput = e => {
-    const { value, classList } = e.target;
+    const { value } = e.target;
     setPw({ value: value });
     if (value.length >= 5) {
       setPw({ value: value, isActive: true });
-      classList.replace('inActive', 'active');
-    } else {
-      classList.replace('active', 'inActive');
     }
   };
 
@@ -52,15 +46,28 @@ function Login() {
 
   // 로그인 버튼 활성화
   useEffect(() => {
-    if (id.isActive && pw.isActive) {
-      loginBtn.current.disabled = false;
-      loginBtn.current.style.background = '#61ADED';
-    } else {
-      loginBtn.current.disabled = true;
-      loginBtn.current.style.background = '#D5E7F8';
-    }
+    id.isActive && pw.isActive
+      ? (loginBtn.current.disabled = false)
+      : (loginBtn.current.disabled = true);
   }, [id.isActive, pw.isActive]);
 
+  // 서버에 로그인 데이터 전송
+  const handleLogin = () => {
+    fetch('/users/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: id.value,
+        password: pw.value,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        console.log(result);
+      });
+  };
   return (
     <div className="loginSubin">
       <LoginSection
@@ -70,6 +77,7 @@ function Login() {
         handleIdInput={handleIdInput}
         handlePwInput={handlePwInput}
         handlePwHide={handlePwHide}
+        handleLogin={handleLogin}
         loginBtn={loginBtn}
       />
     </div>

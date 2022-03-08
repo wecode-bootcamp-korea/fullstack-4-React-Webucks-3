@@ -56,10 +56,14 @@ $inner-border: 1px solid #cccccc;
         padding: 15px 0;
         border: none;
         border-radius: 6px;
-        background: #d5e7f8;
+        background: #61aded;
         color: white;
         font-weight: bold;
         cursor: pointer;
+
+        &:disabled {
+          background: #d5e7f8;
+        }
       }
     }
 

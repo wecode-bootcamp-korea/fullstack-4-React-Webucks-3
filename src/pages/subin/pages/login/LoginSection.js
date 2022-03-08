@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function LoginSection({
   id,
@@ -9,8 +9,9 @@ function LoginSection({
   handleIdInput,
   handlePwInput,
   handlePwHide,
+  handleLogin,
 }) {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <section className="loginSection">
       <h2 className="title">WeBucks</h2>
@@ -18,7 +19,7 @@ function LoginSection({
       <div className="inputSection">
         <div className="idWrapper">
           <input
-            className="loginInput inActive"
+            className={`loginInput ${id.isActive ? 'active' : 'inActive'}`}
             type="text"
             placeholder="전화번호,사용자 이름 또는 이메일"
             onChange={handleIdInput}
@@ -28,7 +29,7 @@ function LoginSection({
         {/* console창에 pw input 은 form 태그에 감싸져야하고 autoComplete 설정을 해줘야한다고 경고창이 뜬다. */}
         <form className="pwWrapper">
           <input
-            className="loginInput inActive"
+            className={`loginInput ${pw.isActive ? 'active' : 'inActive'}`}
             type="password"
             placeholder="비밀번호"
             onChange={handlePwInput}
@@ -38,13 +39,7 @@ function LoginSection({
           />
           <i className="fa-solid fa-eye-slash eye" onClick={handlePwHide} />
         </form>
-        <button
-          className="loginBtn"
-          ref={loginBtn}
-          onClick={() => {
-            navigate('/list-subin');
-          }}
-        >
+        <button className="loginBtn" ref={loginBtn} onClick={handleLogin}>
           로그인
         </button>
       </div>
