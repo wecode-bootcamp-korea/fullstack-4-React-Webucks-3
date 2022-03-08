@@ -51,6 +51,12 @@ function Router() {
         <Route path="/test" element={<Test />} />
         <Route path="/footer-dami" element={<FooterDami />} />
         <Route path="/coffeecard-dami" element={<CoffeeCardDami />} />
+        <Route path="/list-dami" element={<ListDami />} />
+        <Route path="/detail-dami" element={<DetailDami />} />
+        <Route path="/list-subin/:id" element={<DetailSubin />} />
+        <Route path="/login-junghoon" element={<LoginJunghoon />} />
+        <Route path="/List-junghoon" element={<ListJunghoon />} />
+        <Route path="/Detail-junghoon" element={<DetailJunghoon />} />
       </Routes>
     </BrowserRouter>
   );
