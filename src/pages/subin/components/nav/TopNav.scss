@@ -1,42 +1,42 @@
- /* header */
+/* header */
 .TopNavSubin {
-    header {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        padding: 15px 10px;
-        margin: 0 auto;
-        width: 1024px;
-        max-width: 1024px;
-        background: #F6F5F0;
+  header {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 15px 10px;
+    margin: 0 auto;
+    width: 1024px;
+    max-width: 1024px;
+    background: #f6f5f0;
 
-
-        /* title */
-        .title {
-            font-family: 'Dancing Script',
-                cursive;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        /* nav */
-        nav {
-            margin: auto 0;
-
-            ul {
-                display: flex;
-
-                li {
-                    margin: 0 8px;
-                    font-size: 14px;
-                    font-weight: bold;
-                    color: #cccccc;
-
-                    &:hover {
-                        color: #aaaaaa;
-                    }
-                }
-            }
-        }
+    /* title */
+    .title {
+      font-family: 'Dancing Script', cursive;
+      font-weight: bold;
+      font-size: 20px;
     }
- }
+
+    /* nav */
+    nav {
+      margin: auto 0;
+
+      ul {
+        display: flex;
+
+        li {
+          margin: 0 8px;
+          font-size: 14px;
+          font-weight: bold;
+          color: #cccccc;
+
+          .navMenu {
+            &:hover {
+              color: #aaaaaa;
+            }
+          }
+        }
+      }
+    }
+  }
+}

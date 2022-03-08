@@ -11,7 +11,7 @@ $inner-border: 1px solid #cccccc;
   background: #eeefef;
 
   /* login section */
-  #loginSection {
+  .loginSection {
     width: 400px;
     padding: 60px 50px;
     background: #ffffff;
@@ -19,7 +19,7 @@ $inner-border: 1px solid #cccccc;
     border-radius: 6px;
 
     /* webuks title */
-    #title {
+    .title {
       margin-bottom: 40px;
       font-family: 'Dancing Script', cursive;
       font-size: 70px;
@@ -65,35 +65,20 @@ $inner-border: 1px solid #cccccc;
 
     /* forget passwords */
     .forgetPw {
-      text-decoration: none;
       font-weight: bold;
       color: #779db6;
     }
   }
+
+  .active {
+    &:focus {
+      outline: 1px solid green;
+    }
+  }
+
+  .inActive {
+    &:focus {
+      outline: 1px solid red;
+    }
+  }
 }
-
-// /* id,pw active toggle */
-// .active {
-//     border: 1px solid green;
-// }
-
-// .active:focus {
-//     outline: 1px solid green;
-// }
-
-// .inActive:focus {
-//     outline: 2px solid red;
-// }
-
-/* password hide / show toggle */
-// .eye {
-//     position: absolute;
-//     top: 15px;
-//     right: 26px;
-//     height: 20px;
-//     cursor: pointer;
-// }
-
-// .fa-eye {
-//     right: 27px;
-// }
