@@ -31,7 +31,7 @@ function Router() {
           
         <Route path="/login-subin" element={<LoginSubin />} />
         <Route path="/list-subin" element={<ListSubin />} />
-        <Route path="/detail-subin" element={<DetailSubin />} />
+        <Route path="/list-subin/:id" element={<DetailSubin />} />
 
         <Route path="/login-dami" element={<LoginDami />} />
         <Route path="/list-dami" element={<ListDami />} />
