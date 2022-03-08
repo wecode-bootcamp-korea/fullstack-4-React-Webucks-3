@@ -20,10 +20,10 @@ import Test from './pages/dami/Test/Test';
 import FooterDami from './pages/dami/Footer/Footer';
 import CoffeeCardDami from './pages/dami/List/CoffeeCard/CoffeeCard';
 
-// 정훈's 컴포넌트
-// import LoginJunghoon from './pages/junghoon/Login/Login';
-// import DetailJunghoon from './pages/junghoon/Detail/Detail';
-// import ListJunghoon from './pages/junghoon/List/List';
+//정훈's 컴포넌트
+import LoginJunghoon from './pages/junghoon/Login/Login';
+import DetailJunghoon from './pages/junghoon/Detail/Detail';
+import ListJunghoon from './pages/junghoon/List/List';
 
 function Router() {
   return (
