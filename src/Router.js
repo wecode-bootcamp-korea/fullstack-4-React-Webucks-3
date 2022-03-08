@@ -37,16 +37,15 @@ function Router() {
         <Route path="/list-subin" element={<ListSubin />} />
         <Route path="/detail-subin" element={<DetailSubin />} />
 
-        {/* <Route path="/Logon" element={<LoginJunghoon />} />
-        <Route path="/List" element={<ListJunghoon />} />
-        <Route path="/List/Detail" element={<DetailJunghoon />} /> */}
+        <Route path="/login-subin" element={<LoginSubin />} />
+        <Route path="/list-subin" element={<ListSubin />} />
+        <Route path="/list-subin/:id" element={<DetailSubin />} />
 
         <Route path="/login-dami" element={<LoginDami />} />
         <Route path="/coffee" element={<ListDami />} />
         <Route path="/coffee/:id" element={<DetailDami />} />
         <Route path="/test/:id" element={<Test />} />
 
-        {/* <Route path="/detail-dami" element={<DetailDami />} /> */}
         <Route path="/nav-dami" element={<TopnavDami />} />
         <Route path="/test" element={<Test />} />
         <Route path="/footer-dami" element={<FooterDami />} />
@@ -54,6 +53,7 @@ function Router() {
         <Route path="/list-dami" element={<ListDami />} />
         <Route path="/detail-dami" element={<DetailDami />} />
         <Route path="/list-subin/:id" element={<DetailSubin />} />
+
         <Route path="/login-junghoon" element={<LoginJunghoon />} />
         <Route path="/List-junghoon" element={<ListJunghoon />} />
         <Route path="/Detail-junghoon" element={<DetailJunghoon />} />
