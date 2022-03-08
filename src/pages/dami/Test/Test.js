@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import { faHeartPulse } from '@fortawesome/free-solid-svg-icons';
 import './Test.scss';
 import TopnavDami from '../Components/Nav/Topnav';
 import FooterDami from '../Footer/Footer';
@@ -45,8 +46,17 @@ function Test() {
 
   const nutriLeftBox = data.nutrition.slice(0, 3);
   const nutriRightBox = data.nutrition.slice(3, 7);
-  console.log(nutriLeftBox);
-  console.log(nutriRightBox);
+  const [like, setLike] = useState('unliked');
+
+  const heartChange = () => {
+    like === 'unliked' ? setLike('liked') : setLike('unliked');
+  };
+
+  console.log(like);
+
+  // const likeHeart = () => {
+  //   like == true ? :
+  // }
 
   //선언
   return (
@@ -60,7 +70,12 @@ function Test() {
         <img alt={data.name} className="detailImg" src={data.imgURL} />
         <section>
           <p className="productName"> {data.name} </p>
-          <FontAwesomeIcon id="like" icon={faHeart} />
+          <FontAwesomeIcon
+            icon={faHeart}
+            onClick={heartChange}
+            // className={`${styles.fas} ${coffeeDetail.isLiked ? styles.liked : ''}`}/>
+            className={like}
+          />
           <div className="productEnglishName"> {data.EnglishName}</div>
           <hr className="boldLine" />
           <div className="menuDesc">{data.desc}</div>

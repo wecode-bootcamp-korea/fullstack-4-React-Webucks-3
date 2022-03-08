@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './Login.scss';
 
 function LoginDami() {
@@ -8,6 +8,11 @@ function LoginDami() {
   //id와 pw의 초기값을 빈칸으로 두고, 변경사항의 상태를 확인하도록 함
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
+  const navigate = useNavigate();
+
+  const loginSuccess = () => {
+    navigate('/coffee');
+  };
 
   //함수를 input박스와 연결하여 변경사항이 생기면 최신으로 업데이트된 값을 반영하도록 함
   const handleIdInput = e => {
@@ -20,6 +25,22 @@ function LoginDami() {
   //활성화를 결정하기 위한 함수
   const isPassedLogin = id.includes('@') && pw.length > 5;
 
+  //회원가입, 로그인을 위한 fetch함수
+  const handleLogin = () => {
+    fetch('/users/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        id: id,
+        password: pw,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => console.log(result));
+  };
+
   // const isPassedLogin = () => {
   //   if (id.includes('@') && pw.length > 5) {
   //     setIsActive(true);
@@ -27,10 +48,6 @@ function LoginDami() {
   //     setIsActive(false);
   //   }
   // };
-
-  console.log(id);
-  console.log(pw);
-  console.log(isPassedLogin);
 
   //선언
   return (
@@ -60,6 +77,7 @@ function LoginDami() {
                 disabled={!isPassedLogin}
                 className={isPassedLogin ? 'abledBtn' : 'disabledBtn'}
                 type="submit"
+                onClick={handleLogin}
               >
                 <Link to="/coffee" />
                 로그인

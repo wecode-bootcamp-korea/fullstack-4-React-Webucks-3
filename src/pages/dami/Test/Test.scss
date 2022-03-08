@@ -46,11 +46,18 @@
     display: inline;
   }
 
-  #like {
+  .unliked {
     color: lightgray;
     position: absolute;
-    padding-left: 420px;
     padding-top: 10px;
+    margin-left: 450px;
+  }
+
+  .liked {
+    color: red;
+    position: absolute;
+    padding-top: 10px;
+    margin-left: 450px;
   }
 
   .productEnglishName {
