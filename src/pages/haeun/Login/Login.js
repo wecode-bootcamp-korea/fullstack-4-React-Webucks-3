@@ -8,7 +8,7 @@ function Login() {
     navigate('/list');
   };
   return (
-    <div class="LoginHaeun">
+    <div className="loginHaeun">
       <div className="card">
         <h1 id="title">Webucks</h1>
         <div className="form">

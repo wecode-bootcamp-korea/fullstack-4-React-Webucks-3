@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import Welcome from './components/welcome/welcome';
+
 // 하은's 컴포넌트
 import LoginHaeun from './pages/haeun/Login/Login';
 import DetailHaeun from './pages/haeun/Detail/Detail';
@@ -21,6 +23,7 @@ function Router() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/" element={<Welcome />} />
         <Route path="/login-haeun" element={<LoginHaeun />} />
         <Route path="/list-haeun" element={<ListHaeun />} />
         <Route path="/detail-haeun" element={<DetailHaeun />} />
