@@ -3,8 +3,10 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import './Detail.scss';
 import TopnavDami from '../Components/Nav/Topnav';
 import FooterDami from '../Footer/Footer';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import CreateComment from './CreateComment';
+import ReviewList from './ReviewList';
 // import { TopnavDami } from "..Components/Nav/Topnav"
 
 function DetailDami() {
@@ -47,15 +49,45 @@ function DetailDami() {
   const nutriRightBox = data.nutrition.slice(3, 7);
   const [like, setLike] = useState('unliked');
 
+  // mission4 디테일페이지 좋아요 토글기능 추가
   const heartChange = () => {
     like === 'unliked' ? setLike('liked') : setLike('unliked');
   };
+  //mission5 댓글 추가 기능 구현하기
+  //리뷰 input박스에 넣는 내용 (writer와 comment)
+  const [inputs, setInputs] = useState({
+    writer: '',
+    comment: '',
+  });
+  const { writer, comment } = inputs; //할당
 
-  console.log(like);
+  const onChange = e => {
+    const { name, value } = e.target;
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
+  };
 
-  // const likeHeart = () => {
-  //   like == true ? :
-  // }
+  //현재 데이터에 새로운 리뷰를 추가 하기 위해 복사해서 세팅한 데이터 데이터
+  const [review, setReview] = useState(data.comments);
+  const nextId = useRef(4);
+
+  const onCreate = () => {
+    const newReview = {
+      id: nextId.current,
+      writer,
+      comment,
+    };
+    setReview([...review, newReview]);
+    setInputs({
+      writer: '',
+      comment: '',
+    });
+    nextId.current += 1;
+  };
+
+  console.log(review);
 
   //선언
   return (
@@ -68,13 +100,14 @@ function DetailDami() {
       <section className="productDesc">
         <img alt={data.name} className="detailImg" src={data.imgURL} />
         <section>
-          <p className="productName"> {data.name} </p>
-          <FontAwesomeIcon
-            icon={faHeart}
-            onClick={heartChange}
-            // className={`${styles.fas} ${coffeeDetail.isLiked ? styles.liked : ''}`}/>
-            className={like}
-          />
+          <div class="nameNHeart">
+            <p className="productName"> {data.name} </p>
+            <FontAwesomeIcon
+              icon={faHeart}
+              onClick={heartChange}
+              className={like}
+            />
+          </div>
           <div className="productEnglishName"> {data.EnglishName}</div>
           <hr className="boldLine" />
           <div className="menuDesc">{data.desc}</div>
@@ -89,7 +122,7 @@ function DetailDami() {
           <section className="nutriTable">
             <div className="nutriBox1">
               {nutriLeftBox.map(nutri => (
-                <div class="nutriLeft">
+                <div className="nutriLeft">
                   <div className="nutriOneline">
                     {nutri.name}
                     <div className="nutriValue"> {nutri.amount} </div>
@@ -115,13 +148,23 @@ function DetailDami() {
           <section className="reviewSection">
             <div className="review">리뷰</div>
             <hr />
-            {data.comments.map(review => (
-              <div class="reviewLine">
-                <p className="reviewId">{review.writer}</p>
-                {review.comment}
-              </div>
-            ))}
-            <input className="reviewBox" placeholder="리뷰를 입력해주세요." />
+            {review.map(data => {
+              return (
+                <div className="reviewLine">
+                  <ReviewList data={data} key={data.id} />
+                  <button className="reviewEaraseBtn">삭 제</button>
+                </div>
+              );
+            })}
+            <div class="reviewInput">
+              <CreateComment
+                writer={writer}
+                comment={comment}
+                onChange={onChange}
+                onCreate={onCreate}
+              />
+              {/* <button className="reviewBtn"> 작성하기 </button> */}
+            </div>
           </section>
         </section>
       </section>
@@ -129,5 +172,12 @@ function DetailDami() {
     </div>
   );
 }
-
+//댓글을 적고 엔터를 눌렀을 때, 해당 input 내용의 최신내용을  배열에 저장하고 인풋창을 리셋
+//  const reviewEnter = e => {
+//   if (e.key === 'Enter') {
+//     setReviewData(e.target.value);
+//     updateReview(e.target.value);
+//     e.target.value = '';
+//   }
+// };
 export default DetailDami;
