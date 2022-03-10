@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Nanum+Gothic:wght@700&display=swap');
+
+.listDami {
+  #wrap {
+    margin: 0px 80px;
+    width: 1200px;
+  }
+
+  .categoryHeader {
+    background-color: #f6f5ef;
+    padding: 10px 50px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .coldBrew {
+      font-size: 15px;
+      padding: 10px 10px;
+      font-weight: bold;
+    }
+
+    #coffeeIcon {
+      margin-left: 10px;
+    }
+    .coldBrewNoti {
+      margin-left: 5px;
+      font-size: 10px;
+    }
+  }
+
+  .imageSection {
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    // display: inline;
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-gap: 1rem;
+    // flex-wrap: wrap;
+    // flex-direction: row;
+    // justify-content: flex-start;
+    // align-content: center;
+  }
+
+  .imageSectionTwo {
+    display: flex;
+    width: 570px;
+    justify-content: space-between;
+  }
+
+  .bigContainer {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    width: 260px;
+  }
+
+  // ul,
+  // li {
+  //   display: inline;
+  // }
+
+  .listModule {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .productName {
+    display: inline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .coffeeImage {
+    width: 250px;
+    height: 250px;
+  }
+
+  .coffeeImageBrewd {
+    margin-left: 20px;
+  }
+
+  .imageFixed {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  img {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
+
+  img:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transition: all 0.8s ease-in-out; /* 부드러운 모션을 위해 추가*/
+  }
+}

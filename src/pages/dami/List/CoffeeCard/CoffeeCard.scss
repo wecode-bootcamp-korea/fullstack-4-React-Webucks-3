@@ -1,0 +1,26 @@
+.imageSection {
+  display: inline-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  // display: inline;
+  // display: grid;
+  // grid-template-columns: repeat(4, 1fr);
+  // grid-gap: 1rem;
+  // flex-wrap: wrap;
+  // flex-direction: row;
+  // justify-content: flex-start;
+  // align-content: center;
+}
+
+.imageSectionTwo {
+  display: flex;
+  width: 570px;
+  justify-content: space-between;
+}
+
+.bigContainer {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  width: 260px;
+}
