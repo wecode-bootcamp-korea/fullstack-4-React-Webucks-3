@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 function Login() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // const goToList = () => {
-  //   navigate('/list');
-  // };
+  const goToList = () => {
+    navigate('/list-haeun');
+  };
 
   //id 값을 저장할 state 선언
   const [id, setId] = useState('');
@@ -26,7 +26,7 @@ function Login() {
   const isValid = id.includes('@') && password.length >= 5;
 
   return (
-    <div className="loginHaeun">
+    <div className="hani-login">
       <div className="card">
         <h1 id="title">Webucks</h1>
         <div className="form">
@@ -50,7 +50,7 @@ function Login() {
             'cardElements disabledBtn ' + (isValid ? 'activatedBtn' : '')
           }
           id="loginBtn"
-          // onClick={goToList}
+          onClick={goToList}
         >
           로그인
         </button>

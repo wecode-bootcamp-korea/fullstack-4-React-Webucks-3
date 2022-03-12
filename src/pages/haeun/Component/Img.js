@@ -2,10 +2,10 @@ import React from 'react';
 
 const Img = props => (
   <>
-    <div className="imgDiv">
+    <div>
       <img src={props.imgURL} alt="coffee" />
     </div>
-    <p>{props.name}</p>
+    <p className="coffee-name">{props.name}</p>
   </>
 );
 

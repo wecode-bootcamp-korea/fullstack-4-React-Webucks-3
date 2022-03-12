@@ -7,9 +7,7 @@ function List() {
   const [imgList, setImgList] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/data/coffeeListHaeun.json', {
-      method: 'GET',
-    })
+    fetch('/data/coffeeList.json')
       .then(res => res.json())
       .then(data => {
         setImgList(data);
@@ -17,7 +15,7 @@ function List() {
   }, []);
 
   return (
-    <div className="listHaeun">
+    <div className="hani-list">
       <div className="container">
         {/* Webucks + menu */}
         <Topnav />
@@ -35,7 +33,7 @@ function List() {
                 {imgList.map(coffeeImg => {
                   return (
                     <li key={coffeeImg.id}>
-                      <Img img={coffeeImg.imgURL} name={coffeeImg.name} />
+                      <Img imgURL={coffeeImg.imgURL} name={coffeeImg.name} />
                     </li>
                   );
                 })}
