@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './List.scss';
 import Topnav from '../Component/TopNav';
+import Img from '../Component/Img';
 
 function List() {
+  const [imgList, setImgList] = useState([]);
+
+  useEffect(() => {
+    fetch('/data/coffeeList.json')
+      .then(res => res.json())
+      .then(data => {
+        setImgList(data);
+      });
+  }, []);
+
   return (
-    <div class="listHaeun">
+    <div className="hani-list">
       <div className="container">
         {/* Webucks + menu */}
         <Topnav />
@@ -19,96 +30,13 @@ function List() {
             </div>
             <div className="menuList">
               <ul>
-                <li>
-                  <div className="imgDiv">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2022/01/31/15/18/coffee-6984075_1280.jpg"
-                      alt="coffee image"
-                    />
-                  </div>
-                  <p>나이트로 바닐라 크림♡</p>
-                </li>
-                <li>
-                  <div className="imgDiv">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg"
-                      alt="coffee image"
-                    />
-                  </div>
-                  <p>나이트로 바닐라 크림♡</p>
-                </li>
-                <li>
-                  <div className="imgDiv">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2015/05/07/13/46/cappuccino-756490__480.jpg"
-                      alt="coffee image"
-                    />
-                  </div>
-                  <p>나이트로 바닐라 크림♡</p>
-                </li>
-                <li>
-                  <div className="imgDiv">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2017/08/07/22/57/coffee-2608864__480.jpg"
-                      alt="coffee image"
-                    />
-                  </div>
-                  <p>나이트로 바닐라 크림♡</p>
-                </li>
-                <li>
-                  <div className="imgDiv">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2017/03/17/10/29/coffee-2151200_1280.jpg"
-                      alt="coffee image"
-                    />
-                  </div>
-                  <p>나이트로 바닐라 크림♡</p>
-                </li>
-                <li>
-                  <div className="imgDiv">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2015/05/31/10/54/coffee-791045__480.jpg"
-                      alt="coffee image"
-                    />
-                  </div>
-                  <p>나이트로 바닐라 크림♡</p>
-                </li>
-                <li>
-                  <div className="imgDiv">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2021/07/13/18/58/coffee-6464307_1280.jpg"
-                      alt="coffee image"
-                    />
-                  </div>
-                  <p>나이트로 바닐라 크림♡</p>
-                </li>
-                <li>
-                  <div className="imgDiv">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2022/01/31/15/18/coffee-6984075_1280.jpg"
-                      alt="coffee image"
-                    />
-                  </div>
-                  <p>나이트로 바닐라 크림♡</p>
-                </li>
-                <li>
-                  <div className="imgDiv">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2021/07/13/18/58/coffee-6464307_1280.jpg"
-                      alt="coffee image"
-                    />
-                  </div>
-                  <p>나이트로 바닐라 크림♡</p>
-                </li>
-                <li>
-                  <div className="imgDiv">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2015/05/31/10/54/coffee-791045__480.jpg"
-                      alt="coffee image"
-                    />
-                  </div>
-                  <p>나이트로 바닐라 크림♡</p>
-                </li>
+                {imgList.map(coffeeImg => {
+                  return (
+                    <li key={coffeeImg.id}>
+                      <Img imgURL={coffeeImg.imgURL} name={coffeeImg.name} />
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
@@ -121,26 +49,7 @@ function List() {
               </p>
             </div>
             <div className="menuList">
-              <ul>
-                <li>
-                  <div className="imgDiv">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2022/01/31/15/18/coffee-6984075_1280.jpg"
-                      alt="coffee image"
-                    />
-                  </div>
-                  <p>오늘의 커피♡</p>
-                </li>
-                <li>
-                  <div className="imgDiv">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg"
-                      alt="coffee image"
-                    />
-                  </div>
-                  <p>오늘의 커피♡</p>
-                </li>
-              </ul>
+              <ul></ul>
             </div>
           </div>
         </div>

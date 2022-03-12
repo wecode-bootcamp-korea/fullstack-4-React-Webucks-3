@@ -1,67 +1,59 @@
-.listHaeun {
-    .container{
-        width: 80%;
-        margin: 0 auto;
-    }
+.hani-list {
+  width: 100vw;
+  height: 100vh;
 
+  .container {
+    width: 100%;
+  }
 
-    /*product-list*/
+  /*product-list*/
 
-    .productList{
-        margin-top: 20px;
-    }
+  .productList {
+    margin-top: 20px;
+  }
 
+  .type {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 15px;
+    font-size: 15px;
+    background-color: #f4f4f2;
+  }
 
-    .type{
-        display: flex;
-        flex-wrap: nowrap;
-        padding: 15px;
-        font-size: 15px;
-        background-color: #f4f4f2;
-    }
+  .name {
+    margin-left: 10px;
+    margin-right: 20px;
+  }
 
-    .name{
-        margin-left: 10px;
-        margin-right: 20px;
-    }
+  .detail {
+    margin-left: 10px;
+  }
 
-    .detail{
-        margin-left: 10px;
-    }
+  .menuList {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        margin: 0 31px 30px 0;
 
-    .menuList{
-        .imgDiv{
-            height: 252px;
-            margin-bottom: 10px;
-            overflow: hidden;
+        div {
+          margin-bottom: 10px;
+          overflow: hidden;
+
+          img {
+            width: 220px;
+            transition: all 0.5s linear;
+          }
+
+          img:hover {
+            transform: scale(1.2);
+          }
+
+          .coffee-name {
+            text-align: center;
+          }
         }
-        
-        li{
-            margin:0 31px 30px 0;
-
-            img{
-                width: 250px;
-                height: 252px;
-                transition: all 0.5s linear;
-            }
-        
-            img:hover{
-                transform: scale(1.2);
-            }
-
-
-            p{
-            text-align: center; 
-            }
-        }
-       
-    
-        ul {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 20px 0;
-            padding: 0;
-        }
-    
+      }
     }
+  }
 }
