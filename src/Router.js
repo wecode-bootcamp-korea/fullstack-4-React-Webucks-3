@@ -26,10 +26,10 @@ function Router() {
         <Route path="/detail-haeun" element={<DetailHaeun />} />
         <Route path="/login-subin" element={<LoginSubin />} />
         <Route path="/list-subin" element={<ListSubin />} />
-        <Route path="/detail-subin" element={<DetailSubin />} />
-        <Route path="/" element={<LoginJunghoon />} />
-        <Route path="/List" element={<ListJunghoon />} />
-        <Route path="/List/Detail" element={<DetailJunghoon />} />
+        <Route path="/list-subin/:id" element={<DetailSubin />} />
+        <Route path="/login-junghoon" element={<LoginJunghoon />} />
+        <Route path="/List-junghoon" element={<ListJunghoon />} />
+        <Route path="/Detail-junghoon" element={<DetailJunghoon />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,3 +1,4 @@
+
 import React, { useRef, useState } from 'react';
 import './Detail.scss';
 import Topnav from '../Component/TopNav';
